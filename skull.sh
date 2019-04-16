@@ -90,9 +90,9 @@ echo Mohon tunggu..
 load
 clear
 intro
-response=`curl -H "$zlucifer" -m "60" -s -o /dev/null -w "%{http_code}" $cek`
+response=`curl -H "$zlucifer" -m "240" -s -o /dev/null -w "%{http_code}" $cek`
 #echo $response
-if [[ $response != *pre* ]]; then
+if [[ $response != *200* ]]; then
     echo
     echo "Website Offline/Restart untuk sementara"
 else
